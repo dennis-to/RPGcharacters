@@ -25,14 +25,14 @@ public class healer {
         public healer(String n, int lev){
             name = n;
             level = lev;
-            maxhealth = 20 * lev;
+            maxhealth = 16 * lev;
             health = maxhealth;
-            attack = 10 * lev;
-            defense = 8 * lev;
-            magicattack = 0 * lev;
-            magicdefense = 4 * lev;
-            agility = 7 * lev;
-            wisdom = 2 * lev;
+            attack = 4 * lev;
+            defense = 6 * lev;
+            magicattack = 5 * lev;
+            magicdefense = 10 * lev;
+            agility = 3 * lev;
+            wisdom = 12 * lev;
     
         }
         
