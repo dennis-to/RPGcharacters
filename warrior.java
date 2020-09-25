@@ -71,5 +71,32 @@ private int exp;
 	    return str;
 	}
 
+    public int attack(int targetdef, int targetagi){
+        boolean hit = hitcheck(targetagi);
+        if(hit)
+            return calcdamage(targetdef);
+        else
+            return 0;
+
+    }
+
+    private boolean hitcheck(int targetagi){
+        double probability = (double)agility/targetagi;
+        if(Math.random() < probability){
+            System.out.println("Hit!");
+            return true;
+        }
+        else{
+            System.out.println("Miss!");
+            return false;
+        }
+    }
+    private int calcdamage(int targetdef){
+        int damage = (int)(1.36*attack*Math.pow(2.72, -(double)targetdef/attack));
+        System.out.println(damage + " Damage!");
+        return damage;
+
+
+    }
 
 }
